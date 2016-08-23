@@ -77,18 +77,10 @@ $header-height: 42px;
     &.left-nav-button {
       left: 0;
       border-top-left-radius: 4px;
-      &:before{
-        font-family: 'Glyphicons Halflings';
-        content: '\e079';
-      }
     }
     &.right-nav-button {
       right: 0;
       border-top-right-radius: 4px;
-      &:before{
-        font-family: 'Glyphicons Halflings';
-        content: '\e080';
-      }
     }
   }
   > .dropdown {
@@ -107,10 +99,6 @@ $header-height: 42px;
       background-color: #fff;
       z-index: 10;
       border-radius: 0 4px 0 0;
-      &:before{
-        font-family: 'Glyphicons Halflings';
-        content: '\e114';
-      }
     }
   }
   &.show-drop-down {
@@ -136,9 +124,7 @@ $header-height: 42px;
 .dropdown-menu {
   > li {
     > a {
-      .dropDownTabActiveMark:before {
-        font-family: 'Glyphicons Halflings';
-        content: '\e013';
+      .dropDownTabActiveMark {
         padding-right: 10px;
         font-size: 12px;
       }

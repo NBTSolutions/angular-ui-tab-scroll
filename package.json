@@ -3,10 +3,13 @@
   "version": "2.2.7",
   "homepage": "https://github.com/VersifitTechnologies/angular-ui-tab-scroll",
   "description": "A scrollable tab plugin intended for scrolling UI Bootstrap tabset.",
-  "license" : "MIT",
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/VersifitTechnologies/angular-ui-tab-scroll"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VersifitTechnologies/angular-ui-tab-scroll"
+  },
+  "scripts": {
+    "compile-sass": "node-sass angular-ui-tab-scroll.scss angular-ui-tab-scroll.css"
   },
   "keywords": [
     "ui",
@@ -23,5 +26,8 @@
   },
   "bugs": {
     "url": "https://github.com/VersifitTechnologies/angular-ui-tab-scroll/issues"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0"
   }
 }
