@@ -12,13 +12,11 @@
     margin-right: 25px; }
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:first-child.active a,
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:first-child a:hover {
-      border-top-left-radius: 0;
-      border-left: 1px solid transparent; }
+      border-top-left-radius: 0; }
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:last-child.active a,
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:last-child a,
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:last-child a:hover {
       border-top-right-radius: 0;
-      border-right: 1px solid transparent;
       margin-right: -1px; }
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .tab-content {
       margin-left: -25px;
@@ -57,6 +55,13 @@
     .ui-tabs-scrollable > .nav-button.right-nav-button {
       right: 0;
       border-top-right-radius: 4px; }
+    .ui-tabs-scrollable > .nav-button.plus-button {
+      right: 24px;
+      width: 35px;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #ddd; }
   .ui-tabs-scrollable > .dropdown {
     position: absolute;
     top: 0;
@@ -68,7 +73,6 @@
       color: #428bca;
       text-align: center;
       border: 1px solid #ddd;
-      border-left-width: 0;
       padding: 0;
       background-color: #fff;
       z-index: 10;

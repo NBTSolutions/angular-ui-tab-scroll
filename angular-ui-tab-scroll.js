@@ -74,13 +74,16 @@ angular.module('ui.tab.scroll', [])
 
           template: [
             '<div class="ui-tabs-scrollable" ng-class="{\'show-drop-down\': !hideDropDown}">',
-              '<button type="button" ng-mousedown="scrollButtonDown(\'left\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons"' +
+              '<button type="button" ng-mousedown="scrollButtonDown(\'left\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableLeft"' +
               ' ng-disabled="disableLeft" class="btn nav-button left-nav-button"' +
               ' tooltip-placement="{{tooltipLeftDirection}}" uib-tooltip-html="tooltipLeftHtml">',
               '   <i class="fa fa-caret-left"></i>',
               '</button>',
               '<div class="spacer" ng-class="{\'hidden-buttons\': hideButtons}" ng-transclude></div>',
-              '<button type="button" ng-mousedown="scrollButtonDown(\'right\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons"' +
+              '<button type="button" class="btn nav-button plus-button" ng-click="addNewTab()">',
+              ' <i class="fa fa-plus"></i>',
+              '</button>',
+              '<button type="button" ng-mousedown="scrollButtonDown(\'right\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableRight"' +
               ' ng-disabled="disableRight" class="btn nav-button right-nav-button"' +
               ' tooltip-placement="{{tooltipRightDirection}}" uib-tooltip-html="tooltipRightHtml">',
               '   <i class="fa fa-caret-right"></i>',
