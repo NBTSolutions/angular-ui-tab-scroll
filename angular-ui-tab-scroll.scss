@@ -9,12 +9,14 @@
 $button-width: 25px;
 $header-height: 42px;
 
+$margin-right: 59px;
+
 .ui-tabs-scrollable {
   position: relative;
   > .spacer {
     &:not(.hidden-buttons) {
       margin-left: $button-width;
-      margin-right: $button-width;
+      margin-right: $margin-right;
       > div:first-child {
         > .nav-tabs {
           > li {
@@ -32,7 +34,7 @@ $header-height: 42px;
         }
         > .tab-content {
           margin-left: -$button-width;
-          margin-right: -$button-width;
+          margin-right: -$margin-right;
         }
       }
     }
@@ -83,10 +85,8 @@ $header-height: 42px;
     &.plus-button {
       right: 24px;
       width: 35px;
-      border-top: 1px solid transparent;
-      border-left: 1px solid transparent;
-      border-right: 1px solid transparent;
-      border-bottom: 1px solid #ddd;
+      border: 1px solid #ddd;
+      background-color: #f7f8fa;
     }
   }
   > .dropdown {
