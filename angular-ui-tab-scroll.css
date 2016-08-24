@@ -9,7 +9,7 @@
   position: relative; }
   .ui-tabs-scrollable > .spacer:not(.hidden-buttons) {
     margin-left: 25px;
-    margin-right: 59px; }
+    margin-right: 58px; }
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:first-child.active a,
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .nav-tabs > li:first-child a:hover {
       border-top-left-radius: 0; }
@@ -20,7 +20,7 @@
       margin-right: -1px; }
     .ui-tabs-scrollable > .spacer:not(.hidden-buttons) > div:first-child > .tab-content {
       margin-left: -25px;
-      margin-right: -59px; }
+      margin-right: -58px; }
   .ui-tabs-scrollable > .spacer > div:first-child > .nav-tabs {
     white-space: nowrap;
     overflow: hidden;
@@ -53,12 +53,12 @@
       left: 0;
       border-top-left-radius: 4px; }
     .ui-tabs-scrollable > .nav-button.right-nav-button {
-      right: 0;
-      border-top-right-radius: 4px; }
+      right: 34px; }
     .ui-tabs-scrollable > .nav-button.plus-button {
-      right: 24px;
+      right: 0;
       width: 35px;
       border: 1px solid #ddd;
+      border-top-right-radius: 4px;
       background-color: #f7f8fa; }
   .ui-tabs-scrollable > .dropdown {
     position: absolute;

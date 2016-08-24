@@ -9,7 +9,7 @@
 $button-width: 25px;
 $header-height: 42px;
 
-$margin-right: 59px;
+$margin-right: 58px;
 
 .ui-tabs-scrollable {
   position: relative;
@@ -79,13 +79,13 @@ $margin-right: 59px;
       border-top-left-radius: 4px;
     }
     &.right-nav-button {
-      right: 0;
-      border-top-right-radius: 4px;
+      right: 34px;
     }
     &.plus-button {
-      right: 24px;
+      right: 0;
       width: 35px;
       border: 1px solid #ddd;
+      border-top-right-radius: 4px;
       background-color: #f7f8fa;
     }
   }

@@ -68,25 +68,27 @@ angular.module('ui.tab.scroll', [])
             tooltipRightPlacement: '@',
             scrollBy: '@',
             autoRecalculate: '@',
+            plusButtonTooltip: '@',
+            onPlusButtonClick: '&',
             isButtonsVisible: '=?',
             api: '=?'
           },
 
           template: [
             '<div class="ui-tabs-scrollable" ng-class="{\'show-drop-down\': !hideDropDown}">',
-              '<button type="button" ng-mousedown="scrollButtonDown(\'left\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableLeft"' +
-              ' ng-disabled="disableLeft" class="btn nav-button left-nav-button"' +
+              '<button type="button" ng-mousedown="scrollButtonDown(\'left\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableLeft"',
+              ' ng-disabled="disableLeft" class="btn nav-button left-nav-button"',
               ' tooltip-placement="{{tooltipLeftDirection}}" uib-tooltip-html="tooltipLeftHtml">',
               '   <i class="fa fa-caret-left"></i>',
               '</button>',
               '<div class="spacer" ng-class="{\'hidden-buttons\': hideButtons}" ng-transclude></div>',
-              '<button type="button" class="btn nav-button plus-button" ng-click="addNewTab()">',
-              ' <i class="fa fa-plus"></i>',
-              '</button>',
-              '<button type="button" ng-mousedown="scrollButtonDown(\'right\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableRight"' +
-              ' ng-disabled="disableRight" class="btn nav-button right-nav-button"' +
+              '<button type="button" ng-mousedown="scrollButtonDown(\'right\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableRight"',
+              ' ng-disabled="disableRight" class="btn nav-button right-nav-button"',
               ' tooltip-placement="{{tooltipRightDirection}}" uib-tooltip-html="tooltipRightHtml">',
               '   <i class="fa fa-caret-right"></i>',
+              '</button>',
+              '<button type="button" class="btn nav-button plus-button" ng-click="onPlusButtonClick({ message: value })" uib-tooltip-html="plusTooltipHtml">',
+              ' <i class="fa fa-plus"></i>',
               '</button>',
               '<div class="btn-group" uib-dropdown dropdown-append-to-body ng-hide="hideDropDown">',
                 '<button type="button" class="btn" uib-dropdown-toggle>',
@@ -102,7 +104,7 @@ angular.module('ui.tab.scroll', [])
                 '</ul>',
               '</div>',
             '</div>'
-          ].join(''),
+          ].join(' '),
 
           link: function($scope, $el) {
 
@@ -175,7 +177,7 @@ angular.module('ui.tab.scroll', [])
               clearTimeout($scope.winResizeTimeout);
               $scope.winResizeTimeout = setTimeout(function(){
                 $scope.reCalcAll();
-				$scope.scrollTabIntoView();
+				        $scope.scrollTabIntoView();
                 $scope.$apply();
               }, 250);
             };
@@ -337,6 +339,10 @@ angular.module('ui.tab.scroll', [])
 
               // attaching event to window resize.
               angular.element($window).on('resize', $scope.onWindowResize);
+
+              if ($scope.plusButtonTooltip) {
+                $scope.plusTooltipHtml = $sce.trustAsHtml($scope.plusButtonTooltip);
+              }
             };
 
             // re-calculate if the scroll buttons are needed, than call re-calculate for both buttons.

@@ -11,6 +11,10 @@ app.controller('MainCtrl', function() {
   vm.tabs = [];
   vm.scrlTabsApi = {};
 
+  vm.test = function(value) {
+    console.log(value);
+  };
+
   vm.reCalcScroll = function() {
     if(vm.scrlTabsApi.doRecalculate) {
       vm.scrlTabsApi.doRecalculate();
