@@ -80,6 +80,9 @@ $margin-right: 58px;
     }
     &.right-nav-button {
       right: 34px;
+      &.button-right {
+        right: 0;
+      }
     }
     &.plus-button {
       right: 0;

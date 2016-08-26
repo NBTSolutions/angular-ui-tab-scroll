@@ -63,6 +63,7 @@ angular.module('ui.tab.scroll', [])
 
           scope: {
             showDropDown: '@',
+            showPlusButton: '=?',
             showTooltips: '@',
             tooltipLeftPlacement: '@',
             tooltipRightPlacement: '@',
@@ -84,10 +85,12 @@ angular.module('ui.tab.scroll', [])
               '<div class="spacer" ng-class="{\'hidden-buttons\': hideButtons}" ng-transclude></div>',
               '<button type="button" ng-mousedown="scrollButtonDown(\'right\', $event)" ng-mouseup="scrollButtonUp()" ng-hide="hideButtons || disableRight"',
               ' ng-disabled="disableRight" class="btn nav-button right-nav-button"',
+              ' ng-class="{ \'button-right\': !showPlusButton }"',
               ' tooltip-placement="{{tooltipRightDirection}}" uib-tooltip-html="tooltipRightHtml">',
               '   <i class="fa fa-caret-right"></i>',
               '</button>',
-              '<button type="button" class="btn nav-button plus-button" ng-click="onPlusButtonClick({ message: value })" uib-tooltip-html="plusTooltipHtml">',
+              '<button type="button" class="btn nav-button plus-button" ng-click="onPlusButtonClick({ message: value })"',
+              '        uib-tooltip-html="plusTooltipHtml" ng-show="showPlusButton">',
               ' <i class="fa fa-plus"></i>',
               '</button>',
               '<div class="btn-group" uib-dropdown dropdown-append-to-body ng-hide="hideDropDown">',

@@ -54,6 +54,8 @@
       border-top-left-radius: 4px; }
     .ui-tabs-scrollable > .nav-button.right-nav-button {
       right: 34px; }
+      .ui-tabs-scrollable > .nav-button.right-nav-button.button-right {
+        right: 0; }
     .ui-tabs-scrollable > .nav-button.plus-button {
       right: 0;
       width: 35px;
