@@ -212,6 +212,10 @@ angular.module('ui.tab.scroll', [])
                   $scope.scrollTo($scope.tabContainer, realScroll, 150, function(){
                     $timeout(function(){
                       $scope.reCalcSides();
+
+                      if ($scope.disableRight || $scope.disableLeft) {
+                        $scope.cancelMouseDownInterval();
+                      }
                     });
                   }, true);
 
