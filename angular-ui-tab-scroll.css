@@ -89,6 +89,11 @@
   padding-right: 10px;
   font-size: 12px; }
 
+.tooltip {
+  position: fixed;
+  z-index: 999999;
+}
+
 /*make the tabs content be height 100%*/
 .ui-tabs-scrollable > .spacer {
   height: 100%; }
