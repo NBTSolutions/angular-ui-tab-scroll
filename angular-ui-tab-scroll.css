@@ -90,7 +90,6 @@
   font-size: 12px; }
 
 .tooltip {
-  position: fixed;
   z-index: 999999;
 }
 
